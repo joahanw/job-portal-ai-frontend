@@ -28,7 +28,7 @@ const JobDetail = () => {
   const navigate = useNavigate();
   return (
     <div className="p-8 max-w-7xl mx-auto">
-      <Button variant="ghost" className="my-5">
+      <Button variant="ghost" className="my-5" onClick={() => navigate(-1)}>
         <ArrowLeft />
         Back To Jobs
       </Button>
