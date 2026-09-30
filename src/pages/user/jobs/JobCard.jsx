@@ -22,7 +22,7 @@ const JobCard = ({ job }) => {
     .filter(Boolean)
     .join(", ");
   return (
-    <Link to={`/jobs/${job.id}`}>
+    <Link to={`/jobs/${job.id}`} className="block">
       <Card>
         <CardContent className="">
           <div className="flex items-start gap-4">

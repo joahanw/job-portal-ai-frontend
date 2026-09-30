@@ -19,11 +19,13 @@ import { job } from "./dummyJob";
 import { formatRupiah } from "@/lib/rupiahFormatter";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { useNavigate } from "react-router-dom";
 
 const JobDetail = () => {
   const location = [job.city, job.state, job.country]
     .filter(Boolean)
     .join(", ");
+  const navigate = useNavigate();
   return (
     <div className="p-8 max-w-7xl mx-auto">
       <Button variant="ghost" className="my-5">
@@ -166,7 +168,12 @@ const JobDetail = () => {
         <div className="space-y-6">
           <Card>
             <CardContent className="space-y-6">
-              <Button className="w-full py-5">Apply Now</Button>
+              <Button
+                className="w-full py-5"
+                onClick={() => navigate(`/apply/${job.id}`)}
+              >
+                Apply Now
+              </Button>
               <div className="flex gap-2 justify-between">
                 <Button variant="outline" className="w-[85%] py-5">
                   <Bookmark className="h-4 w-4 fill-primary" />
