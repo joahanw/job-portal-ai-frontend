@@ -88,7 +88,7 @@ const ReviewSubmit = ({
             <p className="flex items-center justify-between">
               <span className="text-slate-600">Available From:</span>
               <span className="font-medium text-slate-900">
-                {availableForm.toLocaleDateString()}
+                {availableForm?.toLocaleDateString()}
               </span>
             </p>
           </div>
