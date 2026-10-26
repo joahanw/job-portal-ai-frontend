@@ -34,3 +34,11 @@ export const getApplicationStatus = (status) =>
     label: status ?? "Unknown",
     className: "bg-slate-100 text-slate-700 border-slate-200",
   };
+
+export const STATUS_ORDER = [
+  "AUTO_SHORTLISTED",
+  "REVIEW_RECOMMENDED",
+  "PENDING_REVIEW",
+  "LOW_MATCH",
+  "NOT_SCREENED",
+];

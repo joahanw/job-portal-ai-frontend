@@ -17,3 +17,29 @@ export const timeAgo = (date) => {
     if (value >= 1) return `${value}${label} ago`;
   }
 };
+
+export const isToday = (dtStr) => {
+  const prefix = new Date().toISOString().split("T")[0];
+  return dtStr.startsWith(prefix) ?? false;
+};
+
+// "2026-02-28T..." -> "Feb 28, 2026"
+export const formatDate = (date) => {
+  if (!date) return "-";
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+// "2026-06-25T..." -> "Thursday, June 25, 2026"
+export const formatFullDate = (date = new Date()) => {
+  if (!date) return "-";
+  return new Date(date).toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};

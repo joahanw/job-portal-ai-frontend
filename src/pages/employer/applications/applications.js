@@ -222,6 +222,7 @@ export const applications = [
     ],
     screening: {
       score: 30,
+      shortlistStatus: "LOW_MATCH",
       skillMatchScore: 83,
       experienceMatchScore: 95,
       educationMatchScore: 90,
@@ -455,6 +456,7 @@ export const applications = [
     ],
     screening: {
       score: 79,
+      shortlistStatus: "REVIEW_RECOMMENDED",
       skillMatchScore: 75,
       experienceMatchScore: 85,
       educationMatchScore: 80,
@@ -679,6 +681,7 @@ export const applications = [
     notes: [],
     screening: {
       score: 73,
+      shortlistStatus: "PENDING_REVIEW",
       skillMatchScore: 68,
       experienceMatchScore: 80,
       educationMatchScore: 75,
@@ -902,6 +905,7 @@ export const applications = [
     ],
     screening: {
       score: 92,
+      shortlistStatus: "AUTO_SHORTLISTED",
       skillMatchScore: 95,
       experienceMatchScore: 90,
       educationMatchScore: 85,
@@ -1117,6 +1121,7 @@ export const applications = [
     ],
     screening: {
       score: 52,
+      shortlistStatus: "LOW_MATCH",
       skillMatchScore: 45,
       experienceMatchScore: 50,
       educationMatchScore: 70,
