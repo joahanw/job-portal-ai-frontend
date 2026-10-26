@@ -2,7 +2,7 @@ export const resumes = [
   {
     id: 1,
     candidateId: 1,
-    title: "Duarrrr Doe Maklen - Backend Engineer",
+    title: "Senior Backend Engineer",
     template: "PROFESSIONAL",
     visibility: "PUBLIC",
     isDefault: true,
@@ -18,6 +18,8 @@ export const resumes = [
       githubUrl: "https://github.com/duarrrr",
       portfolioUrl: "https://duarrrr.dev",
       websiteUrl: "https://blog.duarrrr.dev",
+      profileImage:
+        "https://objectstorage.ap-batam-1.oraclecloud.com/n/axy64om8r4us/b/bakedbyerina/o/user%2F36c70012-d46a-45dc-a235-279e12934d29.png",
     },
     summary:
       "Senior Backend Engineer dengan 6 tahun pengalaman membangun sistem pembayaran berskala besar. Menurunkan p99 latency checkout 68% dan memimpin migrasi monolit ke arsitektur event-driven berbasis Kafka untuk 2 juta transaksi harian. Menguasai Java, Spring Boot, PostgreSQL, dan Kubernetes. Mencari peran yang menuntut kepemilikan teknis atas sistem terdistribusi.",
@@ -225,7 +227,7 @@ export const resumes = [
   {
     id: 2,
     candidateId: 1,
-    title: "Duarrrr Doe Maklen - Senior Frontend Engineer",
+    title: "Junior Frontend Engineer",
     template: "MODERN",
     visibility: "PUBLIC",
     isDefault: false,
@@ -241,6 +243,7 @@ export const resumes = [
       githubUrl: "https://github.com/duarrrr",
       portfolioUrl: "https://duarrrr.dev",
       websiteUrl: "https://blog.duarrrr.dev",
+      profileImage: "https://i.pravatar.cc/150?img=5",
     },
     summary:
       "Senior Frontend Engineer dengan 6 tahun pengalaman membangun antarmuka berskala besar dengan React dan TypeScript. Memimpin design system yang dipakai 12 tim produk dan menaikkan skor Core Web Vitals halaman checkout dari 42 ke 91 lewat code splitting serta pengurangan bundle 38%. Menguasai Next.js, Redux Toolkit, TanStack Query, dan pengujian dengan Jest serta Playwright hingga cakupan 78%. Mencari peran yang menuntut kepemilikan arsitektur frontend dan mentoring tim.",

@@ -24,6 +24,7 @@ import JobMetadata from "./pages/admin/jobmetadeta/JobMetadata";
 import AuthLayout from "./layouts/AuthLayout";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
+import Resumes from "./pages/user/resumes/Resumes";
 
 function App() {
   return (
@@ -34,11 +35,13 @@ function App() {
         {/* User Routes */}
         <Route element={<UserLayout />}>
           <Route path="/" element={<Jobs />} />
+          <Route path="/jobs" element={<Jobs />} />
           <Route path="/jobs/:id" element={<JobDetail />} />
           <Route path="/apply/:id" element={<ApplyJob />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/applications" element={<Application />} />
-          <Route path="/saved" element={<SavedJobs />} />
+          <Route path="/saved-jobs" element={<SavedJobs />} />
+          <Route path="/resumes" element={<Resumes />} />
         </Route>
         {/* Employer Routes */}
         <Route path="/employer" element={<EmployerLayout />}>
