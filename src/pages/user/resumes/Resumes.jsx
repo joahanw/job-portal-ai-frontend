@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { FileText, Plus, Star } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import ResumeCard from "./ResumeCard";
 import { resumes } from "../applications/applyNow/dummyResume";
+import CreateResumeDialog from "./CreateResumeDialog";
 
 const Resumes = () => {
+  const [showCreate, SetShowCreate] = useState(false);
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -20,7 +22,7 @@ const Resumes = () => {
               templates
             </p>
           </div>
-          <Button>
+          <Button onClick={() => SetShowCreate(true)}>
             <Plus className="mr-1.5 h-4 w-4" />
             New Resume
           </Button>
@@ -49,6 +51,7 @@ const Resumes = () => {
           ))}
           {/* Add Resume */}
           <button
+            onClick={() => SetShowCreate(true)}
             className="border-2 border-dashed border-slate-300 rounded-xl flex flex-col items-center justify-center
            gap-3 text-slate-400 hover:border-blue-400 hover:text-blue-500 hover:bg-blue-50 transition-all"
           >
@@ -62,6 +65,12 @@ const Resumes = () => {
           </button>
         </div>
       </div>
+
+      {/* Resume Dialog */}
+      <CreateResumeDialog
+        open={showCreate}
+        onClose={() => SetShowCreate(false)}
+      />
     </div>
   );
 };

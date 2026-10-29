@@ -33,6 +33,16 @@ export const formatDate = (date) => {
   });
 };
 
+// "2025-06-15" -> "Jun 2025"
+export const formatMonthYear = (date) => {
+  if (!date) return "-";
+  return new Date(date).toLocaleDateString("en-US", {
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+};
+
 // "2026-06-25T..." -> "Thursday, June 25, 2026"
 export const formatFullDate = (date = new Date()) => {
   if (!date) return "-";

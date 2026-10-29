@@ -1,0 +1,57 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Job Portal AI - Microservices Platform",
+    description:
+      "Platform pencarian kerja berbasis microservices dengan pencocokan kandidat-lowongan bertenaga AI. Terdiri dari 8 service (user, company, job, resume, application, preferences, notification, AI) dengan API Gateway, Service Registry, dan Config Server. Komunikasi asinkron via Kafka untuk notifikasi perubahan status lamaran, serta integrasi Gemini API untuk analisis resume dan skill gap.",
+    technologies: [
+      "Java 21",
+      "Spring Boot 3",
+      "Spring Cloud",
+      "PostgreSQL",
+      "Apache Kafka",
+      "Docker",
+      "Kubernetes",
+      "Gemini API",
+    ],
+    projectUrl: "https://job-portal-ai.duarrrr.dev",
+    sourceCodeUrl: "https://github.com/duarrrr/job-portal-ai",
+    startDate: "2026-01-15",
+    endDate: null,
+    isOngoing: true,
+    displayOrder: 0,
+  },
+  {
+    id: 2,
+    title: "Distributed Rate Limiter Library",
+    description:
+      "Library rate limiting terdistribusi untuk Spring Boot menggunakan algoritma sliding window log di atas Redis. Mendukung pembatasan per-user, per-IP, dan per-endpoint dengan konfigurasi anotasi. Menangani 50.000 request per detik pada pengujian beban dengan overhead p99 di bawah 3ms. Sudah dipublikasikan ke Maven Central dan diunduh lebih dari 1.200 kali.",
+    technologies: [
+      "Java 17",
+      "Spring Boot",
+      "Redis",
+      "Lua",
+      "JUnit 5",
+      "Gatling",
+    ],
+    projectUrl: null,
+    sourceCodeUrl: "https://github.com/duarrrr/spring-distributed-ratelimiter",
+    startDate: "2024-06-01",
+    endDate: "2024-11-30",
+    isOngoing: false,
+    displayOrder: 1,
+  },
+  {
+    id: 3,
+    title: "Event Sourcing Playground",
+    description:
+      "Implementasi event sourcing dan CQRS untuk studi kasus sistem perbankan sederhana, lengkap dengan event replay dan snapshot.",
+    technologies: ["Java", "Spring Boot", "Kafka", "PostgreSQL"],
+    projectUrl: null,
+    sourceCodeUrl: "https://github.com/duarrrr/event-sourcing-playground",
+    startDate: "2023-08-01",
+    endDate: "2023-10-15",
+    isOngoing: false,
+    displayOrder: 2,
+  },
+];

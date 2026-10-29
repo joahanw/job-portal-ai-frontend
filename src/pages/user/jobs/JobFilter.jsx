@@ -4,32 +4,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Separator } from "@/components/ui/separator";
 import { Slider } from "@/components/ui/slider";
+import { EXPERIENCE_LEVEL, JOB_TYPE, WORK_MODE } from "@/lib/userStatus";
 import { SlidersHorizontal, X } from "lucide-react";
 import React from "react";
-
-const JOB_TYPE = [
-  { value: "FULL_TIME", label: "Full-time" },
-  { value: "PART_TIME", label: "Part-time" },
-  { value: "CONTRACT", label: "Contract" },
-  { value: "INTERNSHIP", label: "Internship" },
-  { value: "FREELANCE", label: "Freelance" },
-  { value: "REMOTE", label: "Remote" },
-];
-
-const WORK_MODE = [
-  { value: "REMOTE", label: "Remote" },
-  { value: "HYBRID", label: "Hybrid" },
-  { value: "ONSITE", label: "On-site" },
-];
-
-const EXPERIENCE_LEVEL = [
-  { value: "ENTRY_LEVEL", label: "Entry Level", years: "0-1 yrs" },
-  { value: "JUNIOR", label: "Junior", years: "1-3 yrs" },
-  { value: "MID_LEVEL", label: "Mid Level", years: "3-5 yrs" },
-  { value: "SENIOR", label: "Senior", years: "5-8 yrs" },
-  { value: "LEAD", label: "Lead", years: "8+ yrs" },
-  { value: "EXECUTIVE", label: "Executive", years: "C-level" },
-];
 
 const minSalary = 60000;
 const maxSalary = 100000;

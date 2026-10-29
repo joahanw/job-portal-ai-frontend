@@ -25,8 +25,19 @@ import AuthLayout from "./layouts/AuthLayout";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import Resumes from "./pages/user/resumes/Resumes";
+import ResumeEdit from "./pages/user/resumeEdit/ResumeEdit";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchCurrentUser } from "./redux-store/user/userThunk";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    if (accessToken) {
+      dispatch(fetchCurrentUser());
+    }
+  }, []);
   return (
     <div>
       <Routes>
@@ -42,6 +53,7 @@ function App() {
           <Route path="/applications" element={<Application />} />
           <Route path="/saved-jobs" element={<SavedJobs />} />
           <Route path="/resumes" element={<Resumes />} />
+          <Route path="/resumes/:id/edit" element={<ResumeEdit />} />
         </Route>
         {/* Employer Routes */}
         <Route path="/employer" element={<EmployerLayout />}>

@@ -22,25 +22,14 @@ import {
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
-
-const user = {
-  id: 1,
-  fullName: "duarrrr",
-  email: "duarrrr28@gmail.com",
-  phone: "021222333122",
-  profileImage:
-    "https://objectstorage.ap-batam-1.oraclecloud.com/n/axy64om8r4us/b/bakedbyerina/o/user%2F36c70012-d46a-45dc-a235-279e12934d29.png",
-  role: "ROLE_JOB_SEEKER",
-  status: "ACTIVE",
-  lastLogin: "2026-09-25T00:04:15.500734Z",
-  createdAt: "2026-09-25T00:04:15.921817Z",
-};
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const location = useLocation();
   const isActive = (path) => location.pathname === path;
-
   const navigate = useNavigate();
+
+  const { user } = useSelector((state) => state.user);
   return (
     <nav className="sticky top-0 z-50 border-b bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">

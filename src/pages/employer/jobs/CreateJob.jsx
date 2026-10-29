@@ -17,28 +17,7 @@ import { categories } from "./categories";
 import MultiSelect from "./MultiSelect";
 import { skills } from "./skills";
 import { tags } from "./tags";
-
-const experienceLevel = [
-  { label: "Entry Level", value: "ENTRY_LEVEL" },
-  { label: "Junior", value: "JUNIOR" },
-  { label: "Mide Level", value: "MID_LEVEL" },
-  { label: "Senior Level", value: "SENIOR_LEVEL" },
-  { label: "Lead", value: "LEAD" },
-  { label: "Executive", value: "EXECUTIVE" },
-];
-const jobType = [
-  { label: "Full time", value: "FULL_TIME" },
-  { label: "Part time", value: "PART_TIME" },
-  { label: "Contract", value: "CONTRACT" },
-  { label: "Internship", value: "INTERNSHIP" },
-  { label: "Freelance", value: "FREELANCE" },
-  { label: "Remote", value: "REMOTE" },
-];
-const workMode = [
-  { label: "Remote", value: "REMOTE" },
-  { label: "Onsite", value: "ON_SITE" },
-  { label: "Hybrid", value: "HYBRID" },
-];
+import { EXPERIENCE_LEVEL, JOB_TYPE, WORK_MODE } from "@/lib/userStatus";
 
 const CreateJob = () => {
   const [form, setForm] = useState({
@@ -183,7 +162,7 @@ const CreateJob = () => {
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {experienceLevel.map((experience) => (
+                    {EXPERIENCE_LEVEL.map((experience) => (
                       <SelectItem
                         key={experience.value}
                         value={experience.value}
@@ -202,7 +181,7 @@ const CreateJob = () => {
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {jobType.map((jobType) => (
+                    {JOB_TYPE.map((jobType) => (
                       <SelectItem key={jobType.value} value={jobType.value}>
                         {jobType.label}
                       </SelectItem>
@@ -216,7 +195,7 @@ const CreateJob = () => {
                     <SelectValue placeholder="Select a category" />
                   </SelectTrigger>
                   <SelectContent>
-                    {workMode.map((work) => (
+                    {WORK_MODE.map((work) => (
                       <SelectItem key={work.value} value={work.value}>
                         {work.label}
                       </SelectItem>

@@ -3,13 +3,19 @@ import { Label } from "@/components/ui/label";
 import AuthLayout from "@/layouts/AuthLayout";
 import { cn } from "cn";
 import { ArrowRight, Lock, Mail } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema } from "./authSchema";
 import { Button } from "@/components/ui/button";
+import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "@/redux-store/user/userThunk";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { isAuthenticated, user } = useSelector((state) => state.user);
   const {
     register,
     handleSubmit,
@@ -23,8 +29,14 @@ const Login = () => {
   });
 
   const onSubmit = async (data) => {
-    console.log(data);
+    dispatch(loginUser(data));
   };
+
+  useEffect(() => {
+    if (isAuthenticated && user) {
+      navigate("/jobs");
+    }
+  }, [isAuthenticated, user]);
   return (
     <AuthLayout
       title="Welcome Back"

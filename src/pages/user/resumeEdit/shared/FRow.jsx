@@ -1,0 +1,13 @@
+import { Label } from "@/components/ui/label";
+import React from "react";
+
+const FRow = ({ label, children }) => {
+  return (
+    <div className="space-y-1">
+      <Label className="text-xs text-slate-500">{label}</Label>
+      {children}
+    </div>
+  );
+};
+
+export default FRow;

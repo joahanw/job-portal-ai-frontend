@@ -1,0 +1,48 @@
+export const workExperienceData = [
+  {
+    id: 1,
+    companyName: "Tokopedia",
+    companyLogoUrl: "https://cdn.tokopedia.com/logo.png",
+    jobTitle: "Senior Backend Engineer",
+    employmentType: "FULL_TIME",
+    location: "Jakarta Selatan, Indonesia",
+    startDate: "2022-03-01",
+    endDate: null,
+    isCurrentJob: true,
+    description:
+      "Memimpin pengembangan microservices untuk modul pembayaran yang melayani 2 juta transaksi per hari. Menurunkan p99 latency checkout dari 1.2s menjadi 380ms melalui caching Redis dan optimasi query. Memimpin migrasi monolit ke arsitektur event-driven berbasis Kafka. Membimbing 3 engineer junior dan menetapkan standar code review tim.",
+    technologies: [
+      "Java 21",
+      "Spring Boot 3",
+      "PostgreSQL",
+      "Kafka",
+      "Redis",
+      "Docker",
+      "Kubernetes",
+      "AWS",
+    ],
+    displayOrder: 0,
+  },
+  {
+    id: 2,
+    companyName: "Bukalapak",
+    companyLogoUrl: "https://cdn.bukalapak.com/logo.png",
+    jobTitle: "Software Engineer",
+    employmentType: "FULL_TIME",
+    location: "Jakarta Selatan, Indonesia",
+    startDate: "2020-07-01",
+    endDate: "2022-02-28",
+    isCurrentJob: false,
+    description:
+      "Mengembangkan REST API katalog produk untuk 8 juta SKU dengan rata-rata 15.000 request per menit. Memisahkan modul inventaris dari monolit sehingga waktu deploy turun dari 40 menit menjadi 8 menit. Membangun pipeline CI/CD dengan GitHub Actions dan menaikkan cakupan pengujian dari 34% ke 71%.",
+    technologies: [
+      "Java 11",
+      "Spring Boot 2",
+      "MySQL",
+      "RabbitMQ",
+      "Jenkins",
+      "GitHub Actions",
+    ],
+    displayOrder: 1,
+  },
+];
